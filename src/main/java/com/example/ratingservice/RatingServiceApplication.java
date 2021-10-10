@@ -1,5 +1,9 @@
 package com.example.ratingservice;
 
+import io.sentry.GsonSerializer;
+import io.sentry.ITransportFactory;
+import io.sentry.SentryOptions;
+import io.sentry.transport.StdoutTransport;
 import org.springframework.amqp.support.converter.Jackson2JsonMessageConverter;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,6 +26,5 @@ public class RatingServiceApplication {
     Jackson2JsonMessageConverter mappingJackson2MessageConverter() {
         return new Jackson2JsonMessageConverter();
     }
-
 }
 

@@ -1,4 +1,6 @@
 package com.example.ratingservice;
 
-public record Rating(Long movieId, Integer rating) {
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+public record Rating(@JsonProperty Long movieId, @JsonProperty Integer rating) {
 }

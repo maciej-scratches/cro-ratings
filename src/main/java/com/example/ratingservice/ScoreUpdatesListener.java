@@ -19,8 +19,7 @@ class ScoreUpdatesListener {
     void handleScoreUpdate(ScoreUpdate scoreUpdate) {
         LOGGER.info("Received score update: {}", scoreUpdate);
         ratingRepository.saveRating(scoreUpdate.movieId(), scoreUpdate.score());
-
     }
-}
 
-record ScoreUpdate(@JsonProperty("movieId") Long movieId, @JsonProperty("score") Integer score){}
+    static record ScoreUpdate(@JsonProperty("movieId") Long movieId, @JsonProperty("score") Integer score){}
+}
