@@ -1,6 +1,5 @@
 package com.example.ratingservice;
 
-import io.sentry.spring.tracing.SentrySpan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;
@@ -9,7 +8,6 @@ import java.util.Random;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
-@SentrySpan
 public class RatingRepository {
     private static final Logger LOGGER = LoggerFactory.getLogger(RatingRepository.class);
     private final Random random = new Random();
